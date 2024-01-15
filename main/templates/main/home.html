@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}
+  مال
+{% endblock %}
+
+{% block body %}
+  <!-- Main Post Section Start -->
+  <div class="container-fluid py-5">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-7 col-xl-8 mt-0">
+          <div class="position-relative overflow-hidden rounded">
+            <img src="" class="img-fluid rounded img-zoomin w-100" alt="" />
+            <div class="d-flex justify-content-center px-4 position-absolute flex-wrap" style="bottom: 10px; left: 0;">
+              <a href="#" class="text-white me-3 link-hover"><i class="fa fa-clock"></i> 06 minute read</a>
+              <a href="#" class="text-white me-3 link-hover"><i class="fa fa-eye"></i> 3.5k Views</a>
+              <a href="#" class="text-white me-3 link-hover"><i class="fa fa-comment-dots"></i> 05 Comment</a>
+              <a href="#" class="text-white link-hover"><i class="fa fa-arrow-up"></i> 1.5k Share</a>
+            </div>
+          </div>
+          <div class="border-bottom py-3">
+            <a href="#" class="display-4 text-dark mb-0 link-hover">{{ hot_new.title }}</a>
+          </div>
+          <div class="bg-light p-4 rounded">
+            <div class="news-2">
+              <h3 class="mb-4">أخر الأخبار</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-xl-4">
+          <div class="bg-light rounded p-4 pt-0">
+            <div class="row g-4">
+              {% for last_new in last_news %}
+                <div class="col-12">
+                  <div class="row g-4 align-items-center">
+                    <div class="col-5">
+                      <div class="overflow-hidden rounded">
+                        <img src="" class="img-zoomin img-fluid rounded w-100" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-7">
+                      <div class="features-content d-flex flex-column">
+                        <a href="" class="h6">{{ last_new.title }}</a>
+                        <small><i class="fa fa-clock">06 minute read</i></small>
+                        <small><i class="fa fa-eye">3.5k Views</i></small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
