@@ -22,24 +22,22 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("main.urls")),
-    
- ]
-# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-# if settings.DEBUG:
-#     from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-#     from django.views import defaults as default_views
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+    from django.views import defaults as default_views
 
-#     urlpatterns += [
-#         path(
-#             "400/",
-#             default_views.bad_request,
-#             kwargs={"exception": Exception("Bad Request!")},
-#         ),
-#         path(
-#             "404/",
-#             default_views.page_not_found,
-#             kwargs={"exception": Exception("Page not Found")},
-#         ),
-#         path("500/", default_views.server_error),
-#     ]
-#     urlpatterns += staticfiles_urlpatterns()
+    urlpatterns += [
+        path(
+            "400/",
+            default_views.bad_request,
+            kwargs={"exception": Exception("Bad Request!")},
+        ),
+        path(
+            "404/",
+            default_views.page_not_found,
+            kwargs={"exception": Exception("Page not Found")},
+        ),
+        path("500/", default_views.server_error),
+    ]
+    urlpatterns += staticfiles_urlpatterns()
