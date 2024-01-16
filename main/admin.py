@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
 from django.contrib import admin
-from .models import NewsContent
-from .models import Category
+
+from .models import Category, NewsContent
 
 # Register your models here.
 

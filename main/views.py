@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
+from typing import Any
+
 from django.shortcuts import render
 from django.views.generic import TemplateView
+
 from .models import NewsContent
-from typing import Any
 
 
 # Create your views here.
