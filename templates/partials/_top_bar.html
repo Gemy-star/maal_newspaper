@@ -5,7 +5,7 @@
   <div class="row align-items-center bg-light px-lg-5">
     <div class="col-12 col-md-8">
       <div class="d-flex justify-content-between">
-        <div class="bg-primary text-white text-center py-2" style="width: 100px;">تريندج</div>
+        <div class="bg-primary text-white text-center py-2" style="width: 100px; background-color: #ED1C24 !important;">تريندج</div>
         <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3" style="width: calc(100% - 100px); padding-left: 90px;">
           {% for new in news %}
             <div class="text-truncate">
@@ -19,11 +19,13 @@
       {% now 'SHORT_DATETIME_FORMAT' %}
     </div>
   </div>
-  <div class="row align-items-center py-2 px-lg-5">
+  <div class="row align-items-center">
     <div class="col-lg-4">
-      <a href="" class="navbar-brand d-none d-lg-block"><h1 class="m-0 display-5 text-uppercase"><span class="text-primary">مال</span> نيوز</h1></a>
+      <a href="" class="navbar-brand d-none d-lg-block"><h1 class="m-0 display-5 text-uppercase d-flex"><span class="text-primary" style="color: #ED1C24 !important;">مال</span> نيوز</h1></a>
     </div>
-    <div class="col-lg-8 text-center text-lg-left">ADS</div>
+    <div class="col-lg-8 text-center text-lg-right">
+      <img class="img-fluid" src="{% static 'img/ads-700x70.jpg' %}" alt="" />
+    </div>
   </div>
 </div>
 <!-- Topbar End -->
